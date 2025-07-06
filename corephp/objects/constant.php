@@ -9,12 +9,16 @@
 
 <body>
     <?php
-    echo strrev("Hello, World!");
-    echo "<br>";
-    echo str_repeat("Hello, World! ", 3);
-    echo "<br>";
-    echo strtoupper("Hello, World!");
-    echo "<br>";
+    Translate::lookup();
+    class Translate {
+        const ENGLISH = 0;
+        const SPANISH = 1;
+
+        static function lookup() {
+            echo self::SPANISH;
+        }
+    }
+    
     ?>
 </body>
 
